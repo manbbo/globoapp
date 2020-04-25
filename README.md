@@ -3,6 +3,8 @@
 An app for Globo Challenge at Mega Hack
 
 ## Packages I've used
+
+Above are the packages and/or features used to build this project
 - [Carousel Slider](https://pub.dev/packages/carousel_slider)
 - [Splash Screen - included into Flutter App](https://flutter.dev/docs/development/ui/advanced/splash-screen)
 
