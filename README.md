@@ -1,4 +1,4 @@
-# megahack
+# Mega Hack App Project
 
 An app for Globo Challenge at Mega Hack
 
