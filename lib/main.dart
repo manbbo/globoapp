@@ -41,22 +41,61 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text.rich(TextSpan(text:"globo.com", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)))
-      ),
-      drawer: Drawer(
-        child: Text('Drawer'),
-      ),
-      body: //child: Content(topicName: "Teste",)
-          ListView(
-        children: <Widget>[
-          MainContent(topicName: "Principais Noticias", newsName: "Bolsonarista ataca câmera de jornalista em ato",),
-          Content(topicName: "notícias quentes", newsName: "Bolsonarista ataca bolsonaro",),
-          Content(topicName: "notícias frias", newsName: "Bolsonarista ataca bolsonaro",),
-          Content(topicName: "notícias amareladas", newsName: "Bolsonarista ataca bolsonaro",),
-          Content(topicName: "notícias verdes", newsName: "Bolsonarista ataca bolsonaro",),
-        ],
+      body: Container(
+        padding: EdgeInsets.only(
+          top: 40,
+        ),
+        child: Stack(
+          overflow: Overflow.visible,
+          children: <Widget>[
+            ListView(
+              padding: EdgeInsets.only(top: 50),
+              children: <Widget>[
+                MainContent(
+                  topicName: "Principais Noticias",
+                  newsName: "Bolsonarista ataca câmera de jornalista em ato",
+                ),
+                Content(
+                  topicName: "notícias quentes",
+                  newsName: "Bolsonarista ataca bolsonaro",
+                ),
+                Content(
+                  topicName: "notícias frias",
+                  newsName: "Bolsonarista ataca bolsonaro",
+                ),
+                Content(
+                  topicName: "notícias amareladas",
+                  newsName: "Bolsonarista ataca bolsonaro",
+                ),
+                Content(
+                  topicName: "notícias verdes",
+                  newsName: "Bolsonarista ataca bolsonaro",
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                    width: 411.4,
+                    height: 60,
+                    alignment: Alignment.topCenter,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                      border: Border(
+                        bottom: BorderSide(
+                          color: Colors.black26
+                        )
+                      )
+                    ),
+                    child: Text.rich(TextSpan(
+                        text: "globo.com",
+                        style: TextStyle(
+                            fontSize: 40, fontWeight: FontWeight.bold, color: Colors.blue))))
+              ],
+              //
+            ),
+          ],
+        ),
       ),
       bottomSheet: Container(
         height: 50,
