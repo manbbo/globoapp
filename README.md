@@ -6,7 +6,10 @@ An app for Globo Challenge at Mega Hack
 
 Above are the packages and/or features used to build this project
 - [Carousel Slider](https://pub.dev/packages/carousel_slider)
-- [Splash Screen - included into Flutter App](https://flutter.dev/docs/development/ui/advanced/splash-screen)
+- [Splash Screen - included into Flutter](https://flutter.dev/docs/development/ui/advanced/splash-screen)
+- [Nested ScrollView - included into Flutter](https://api.flutter.dev/flutter/widgets/NestedScrollView-class.html)
+- [SliverApp - included into Flutter](https://api.flutter.dev/flutter/material/SliverAppBar-class.html)
+- [Custom Scrollview - included into Flutter](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html)
 
 ## Getting Started
 

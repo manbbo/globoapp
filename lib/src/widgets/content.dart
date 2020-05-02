@@ -27,7 +27,7 @@ class _MainContentState extends State<MainContent> {
         //alignment: Alignment.topLeft,
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(left: 10, top:20),
+            padding: EdgeInsets.only(left: 10, top:10),
             alignment: Alignment.topLeft,
             child: Text.rich(TextSpan(
                 style: TextStyle(
@@ -39,12 +39,13 @@ class _MainContentState extends State<MainContent> {
             )),
             height: 50,
           ),
+          Container(width: 30,),
           Container(
-            height:300,
+            height:250,
             child: CarouselSlider.builder(
                 itemCount: 5,
                 itemBuilder: (BuildContext context, int itemIndex) => Container(
-                    padding: EdgeInsets.all(5),
+                    padding: EdgeInsets.all(2),
                     child:
                     Stack(children: <Widget>[
                       ClipRRect(
@@ -110,8 +111,8 @@ class _ContentState extends State<Content> {
       Stack(
       children: <Widget>[
             Container(
-              width: 440,
-              padding: EdgeInsets.only(left: 10),
+              width: 420,
+              padding: EdgeInsets.only(left: 40),
               height:200,
               child: CarouselSlider.builder(
                   itemCount: 5,
@@ -120,14 +121,13 @@ class _ContentState extends State<Content> {
                         ClipRRect(
                             borderRadius: BorderRadius.all(Radius.circular(10.0)),
                             child: Image.network('https://s2.glbimg.com/_q4Sc4hUnwM3V5IyquACI7rMMLI=/0x0:1280x961/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/v/h/mglBsvT7WERz0LWlrILw/moro-na-pf-4.jpg',
-                              width: 900,
-                              height: 700,)
+                              width: 220,
+                              height: 160,)
                         ),
                         Container(
-                          margin: EdgeInsets.only(top:150),
+                          margin: EdgeInsets.only(top:137),
                           decoration: BoxDecoration(
                               color: Colors.black54,
-                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                           ),
                           //width: 300,
                           height: 50,
@@ -163,7 +163,7 @@ class _ContentState extends State<Content> {
               text: topicName.toUpperCase()
           ),
           textDirection: TextDirection.rtl,),
-          height: 200,
+          height: 187,
           width: 100,
           decoration: BoxDecoration(
               color: Colors.amberAccent,
