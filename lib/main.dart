@@ -43,13 +43,13 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(
-          top: 40,
+          top: 30,
         ),
         child: Stack(
           overflow: Overflow.visible,
           children: <Widget>[
             ListView(
-              padding: EdgeInsets.only(top: 50),
+              padding: EdgeInsets.only(top: 60),
               children: <Widget>[
                 MainContent(
                   topicName: "Principais Noticias",
