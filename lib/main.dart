@@ -129,12 +129,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       resizeToAvoidBottomInset: true,
-      bottomSheet: Container(
-          height: 50,
-          alignment: Alignment.bottomCenter,
-          child: Center(
-            child: Text('IM HERE'),
-          )),
       drawer: Drawer(
         child: Text('DRAWER'),
       ),

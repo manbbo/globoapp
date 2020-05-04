@@ -40,7 +40,7 @@ class _MainContentState extends State<MainContent> {
           ),
           Container(width: 30,),
           Container(
-            height:250,
+            height:300,
             child: CarouselSlider.builder(
                 itemCount: 5,
                 itemBuilder: (BuildContext context, int itemIndex) => Container(
@@ -54,21 +54,21 @@ class _MainContentState extends State<MainContent> {
                             height: 300,)
                       ),
                       Container(
-                        margin: EdgeInsets.only(top:180),
+                        margin: EdgeInsets.only(top:200),
                         padding: EdgeInsets.only(left: 20),
                         decoration: BoxDecoration(
                           color: Colors.black54,
                           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                         ),
                         //width: 300,
-                          height: 100,
+                          height: 85,
                           child: Text.rich(TextSpan(text: newsName + "\n", style: TextStyle(fontSize: 20, color: Colors.white))),
                         alignment: Alignment.bottomCenter,
                       ),
                     ],),
                 ),
                 options: CarouselOptions(
-                  height: 400,
+                  height: 800,
                   viewportFraction: 0.9,
                   initialPage: 0,
                   enableInfiniteScroll: true,
@@ -120,24 +120,25 @@ class _ContentState extends State<Content> {
                         ClipRRect(
                             borderRadius: BorderRadius.all(Radius.circular(10.0)),
                             child: Image.network(imgUrl,
-                              width: 220,
-                              height: 160,)
+                              width: 320,
+                              height: 260,)
                         ),
                         Container(
+                          padding: EdgeInsets.only(left: 7, top: 7),
                           margin: EdgeInsets.only(top:137),
                           decoration: BoxDecoration(
                               color: Colors.black54,
                           ),
                           //width: 300,
-                          height: 50,
-                          child: Text.rich(TextSpan(text: newsName + "\n", style: TextStyle(fontSize: 15, color: Colors.white))),
+                          height: 60,
+                          child: Text.rich( TextSpan(text: newsName + "\n", style: TextStyle(fontSize: 15, color: Colors.white))),
                           alignment: Alignment.bottomCenter,
                         ),
                       ],)
                   ),
                   options: CarouselOptions(
-                    height: 800,
-                    viewportFraction: 0.66,
+                    height: 700,
+                    viewportFraction: 0.68,
                     initialPage: 0,
                     enableInfiniteScroll: false,
                     reverse: false,
@@ -162,7 +163,7 @@ class _ContentState extends State<Content> {
               text: topicName.toUpperCase()
           ),
           textDirection: TextDirection.rtl,),
-          height: 187,
+          height: 197,
           width: 100,
           decoration: BoxDecoration(
               color: Colors.amberAccent,
