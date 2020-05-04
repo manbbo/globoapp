@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:megahack/src/widgets/CustomHeaderDelegate.dart';
-import 'package:megahack/src/widgets/NewsText.dart';
+import '../widgets/CustomHeaderDelegate.dart';
+import '../widgets/NewsText.dart';
 
 class ContentView extends StatefulWidget{
   @override
