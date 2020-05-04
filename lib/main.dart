@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import './src/widgets/content.dart';
+import 'src/screens/content_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,11 +24,14 @@ class MyHomePage extends StatefulWidget {
   MyHomePage({
     Key key,
   }) : super(key: key);
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final String newsTitle =
+      "Procura por adoção de cães e gatos cresce na pandemia";
   final globalKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -70,29 +74,54 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ListView(
                 padding: EdgeInsets.only(top: 3),
                 children: <Widget>[
-                  MainContent(
-                    topicName: "Principais Noticias",
-                    newsName: "Bolsonarista ataca câmera de jornalista em ato",
-                  ),
+                  InkWell(
+                      child: MainContent(
+                        topicName: "Principais Noticias",
+                        newsName: newsTitle,
+                      ),
+                      onTap: () => Navigator.of(context).push(
+                              MaterialPageRoute(builder: (BuildContext ctx) {
+                            return new ContentView();
+                          }))),
                   Container(
                     width: 30,
                   ),
-                  Content(
-                    topicName: "notícias quentes",
-                    newsName: "Bolsonarista ataca bolsonaro",
-                  ),
-                  Content(
-                    topicName: "notícias frias",
-                    newsName: "Bolsonarista ataca bolsonaro",
-                  ),
-                  Content(
-                    topicName: "notícias amareladas",
-                    newsName: "Bolsonarista ataca bolsonaro",
-                  ),
-                  Content(
-                    topicName: "notícias verdes",
-                    newsName: "Bolsonarista ataca bolsonaro",
-                  ),
+                  InkWell(
+                      child: Content(
+                        topicName: "notícias quentes",
+                        newsName: newsTitle,
+                      ),
+                      onTap: () => Navigator.of(context).push(
+                              MaterialPageRoute(builder: (BuildContext ctx) {
+                            return new ContentView();
+                          }))),
+                  InkWell(
+                      child: Content(
+                        topicName: "notícias frias",
+                        newsName: newsTitle,
+                      ),
+                      onTap: () => Navigator.of(context).push(
+                              MaterialPageRoute(builder: (BuildContext ctx) {
+                            return new ContentView();
+                          }))),
+                  InkWell(
+                      child: Content(
+                        topicName: "notícias amareladas",
+                        newsName: newsTitle,
+                      ),
+                      onTap: () => Navigator.of(context).push(
+                              MaterialPageRoute(builder: (BuildContext ctx) {
+                            return new ContentView();
+                          }))),
+                  InkWell(
+                      child: Content(
+                        topicName: "notícias verdes",
+                        newsName: newsTitle,
+                      ),
+                      onTap: () => Navigator.of(context).push(
+                              MaterialPageRoute(builder: (BuildContext ctx) {
+                            return new ContentView();
+                          }))),
                 ],
               ),
             ),

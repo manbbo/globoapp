@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -13,6 +12,7 @@ class MainContent extends StatefulWidget {
 
 class _MainContentState extends State<MainContent> {
   String topicName, newsName;
+  String imgUrl = "https://diariodamanha.com/wp-content/uploads/2019/02/doguinho-esta.jpg";
 
   _MainContentState(String newsName, String topicName) {
     this.topicName = topicName;
@@ -21,7 +21,6 @@ class _MainContentState extends State<MainContent> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       child: Column(
         //alignment: Alignment.topLeft,
@@ -50,7 +49,7 @@ class _MainContentState extends State<MainContent> {
                     Stack(children: <Widget>[
                       ClipRRect(
                           borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                          child: Image.network('https://s2.glbimg.com/_q4Sc4hUnwM3V5IyquACI7rMMLI=/0x0:1280x961/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/v/h/mglBsvT7WERz0LWlrILw/moro-na-pf-4.jpg',
+                          child: Image.network(imgUrl,
                             width: 600,
                             height: 300,)
                       ),
@@ -105,7 +104,7 @@ class _ContentState extends State<Content> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    String imgUrl = "https://diariodamanha.com/wp-content/uploads/2019/02/doguinho-esta.jpg";
     return
     Container(padding: EdgeInsets.only(bottom: 5, top: 5), child:
       Stack(
@@ -120,7 +119,7 @@ class _ContentState extends State<Content> {
                       child: Stack(children: <Widget>[
                         ClipRRect(
                             borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                            child: Image.network('https://s2.glbimg.com/_q4Sc4hUnwM3V5IyquACI7rMMLI=/0x0:1280x961/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/v/h/mglBsvT7WERz0LWlrILw/moro-na-pf-4.jpg',
+                            child: Image.network(imgUrl,
                               width: 220,
                               height: 160,)
                         ),
