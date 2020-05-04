@@ -21,6 +21,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
@@ -41,6 +42,12 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: asset/font/opensans/OpenSans-Bold.ttf
+        - asset: asset/font/opensans/OpenSans-Light.ttf
+        - asset: asset/font/opensans/OpenSans-Regular.ttf
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

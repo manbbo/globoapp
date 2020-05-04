@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class MainContent extends StatefulWidget {
-  final String topicName, newsName;
+  final String topicName, newsName, imgUrl;
 
-  MainContent({this.topicName, this.newsName});
+  MainContent({this.topicName, this.newsName, this.imgUrl = "https://diariodamanha.com/wp-content/uploads/2019/02/doguinho-esta.jpg"});
 
   @override
-  _MainContentState createState() => _MainContentState(this.newsName, this.topicName);
+  _MainContentState createState() => _MainContentState(this.newsName, this.topicName, this.imgUrl);
 }
 
 class _MainContentState extends State<MainContent> {
-  String topicName, newsName;
-  String imgUrl = "https://diariodamanha.com/wp-content/uploads/2019/02/doguinho-esta.jpg";
+  String topicName, newsName, imgUrl;
 
-  _MainContentState(String newsName, String topicName) {
+  _MainContentState(String newsName, topicName, imgUrl) {
     this.topicName = topicName;
     this.newsName = newsName;
+    this.imgUrl = imgUrl;
   }
 
   @override
@@ -31,30 +31,30 @@ class _MainContentState extends State<MainContent> {
             child: Text.rich(TextSpan(
                 style: TextStyle(
                     color: Colors.black,
-                    fontSize: 25,
-                  fontFamily: 'Times New Roman'
+                    fontSize: 23,
+                  fontFamily: 'OpenSans',
                 ),
                 text: topicName.toUpperCase()
             )),
             height: 50,
           ),
-          Container(width: 30,),
+          Container(width: 20,),
           Container(
-            height:300,
+            height:250,
             child: CarouselSlider.builder(
                 itemCount: 5,
                 itemBuilder: (BuildContext context, int itemIndex) => Container(
-                    padding: EdgeInsets.all(2),
+                    //padding: EdgeInsets.all(),
                     child:
                     Stack(children: <Widget>[
                       ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
                           child: Image.network(imgUrl,
                             width: 600,
                             height: 300,)
                       ),
                       Container(
-                        margin: EdgeInsets.only(top:200),
+                        margin: EdgeInsets.only(top:170),
                         padding: EdgeInsets.only(left: 20),
                         decoration: BoxDecoration(
                           color: Colors.black54,
@@ -62,19 +62,20 @@ class _MainContentState extends State<MainContent> {
                         ),
                         //width: 300,
                           height: 85,
-                          child: Text.rich(TextSpan(text: newsName + "\n", style: TextStyle(fontSize: 20, color: Colors.white))),
+                          child: Text.rich(TextSpan(text: newsName +  "\n", style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold))),
                         alignment: Alignment.bottomCenter,
                       ),
                     ],),
                 ),
                 options: CarouselOptions(
-                  height: 800,
-                  viewportFraction: 0.9,
+                  height: 1000,
+                  viewportFraction: 0.8,
+                  aspectRatio: 16/9,
                   initialPage: 0,
                   enableInfiniteScroll: true,
                   reverse: false,
                   autoPlay: false,
-                  autoPlayCurve: Curves.fastOutSlowIn,
+                  //autoPlayCurve: Curves.fastOutSlowIn,
                   enlargeCenterPage: true,
                   scrollDirection: Axis.horizontal,
                 )),
@@ -86,27 +87,30 @@ class _MainContentState extends State<MainContent> {
 }
 
 class Content extends StatefulWidget {
-  final String topicName, newsName;
+  final String topicName, newsName, imgUrl;
+  final Color color;
 
-  Content({this.topicName, this.newsName});
+  Content({this.topicName, this.newsName, this.color, this.imgUrl = "https://diariodamanha.com/wp-content/uploads/2019/02/doguinho-esta.jpg"});
 
   @override
-  _ContentState createState() => _ContentState(this.topicName, this.newsName);
+  _ContentState createState() => _ContentState(this.topicName, this.newsName, this.color, this.imgUrl);
 }
 
 class _ContentState extends State<Content> {
-  String topicName, newsName;
+  String topicName, newsName, imgUrl;
+  Color color;
 
-  _ContentState(String topicName, newsName) {
+  _ContentState(String topicName, newsName, Color color, imgUrl) {
     this.topicName = topicName;
     this.newsName = newsName;
+    this.imgUrl = imgUrl;
+    this.color  = color;
   }
 
   @override
   Widget build(BuildContext context) {
-    String imgUrl = "https://diariodamanha.com/wp-content/uploads/2019/02/doguinho-esta.jpg";
     return
-    Container(padding: EdgeInsets.only(bottom: 5, top: 5), child:
+    Container(padding: EdgeInsets.only(top: 0), child:
       Stack(
       children: <Widget>[
             Container(
@@ -131,7 +135,7 @@ class _ContentState extends State<Content> {
                           ),
                           //width: 300,
                           height: 60,
-                          child: Text.rich( TextSpan(text: newsName + "\n", style: TextStyle(fontSize: 15, color: Colors.white))),
+                          child: Text.rich( TextSpan(text: newsName + "\n", style: TextStyle(fontSize: 15, color: Colors.white, fontWeight: FontWeight.bold))),
                           alignment: Alignment.bottomCenter,
                         ),
                       ],)
@@ -144,31 +148,32 @@ class _ContentState extends State<Content> {
                     reverse: false,
                     autoPlay: false,
                     autoPlayCurve: Curves.fastOutSlowIn,
-                    enlargeCenterPage: true,
+                    enlargeCenterPage: false,
                     scrollDirection: Axis.horizontal,
                   )),
             ),
-
-
         Container(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.only(top: 23),
+          child: Container(
+          padding: EdgeInsets.only(bottom: 10),
           alignment: Alignment.bottomCenter,
           child: Text.rich(TextSpan(
               style: TextStyle(
-                color: Colors.black,
-                fontSize: 16,
-                fontFamily: 'Helvetica Neue'
+                  color: Colors.black,
+                  fontSize: 16,
+                  fontFamily: 'Helvetica Neue'
               ),
 
               text: topicName.toUpperCase()
           ),
-          textDirection: TextDirection.rtl,),
-          height: 197,
+            textDirection: TextDirection.rtl,),
+          height: 180,
           width: 100,
           decoration: BoxDecoration(
-              color: Colors.amberAccent,
+              color: color,
               borderRadius: BorderRadius.circular(5)),
-        ),
+        ),),
+
     ]
     ),);
   }
