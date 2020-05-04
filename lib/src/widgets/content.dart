@@ -101,6 +101,57 @@ class _MainContentState extends State<MainContent> {
   }
 }
 
+class News extends StatefulWidget {
+  final String newsName, imgUrl;
+
+  News({this.newsName, this.imgUrl});
+
+  @override
+  _NewsState createState() => _NewsState(this.newsName, this.imgUrl);
+}
+
+class _NewsState extends State<News> {
+  String newsName,imgUrl;
+  _NewsState(newsName, imgUrl) {
+    this.newsName = newsName;
+    this.imgUrl = imgUrl;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container(
+      child: Stack(
+        children: <Widget>[
+          ClipRRect(
+              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              child: Image.network(
+                imgUrl,
+                width: 320,
+                height: 260,
+              )),
+          Container(
+            padding: EdgeInsets.only(left: 7, top: 7),
+            margin: EdgeInsets.only(top: 100),
+            decoration: BoxDecoration(
+              color: Colors.black54,
+            ),
+            //width: 300,
+            height: 80,
+            child: Text.rich(TextSpan(
+                text: newsName + "\n",
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold))),
+            alignment: Alignment.bottomCenter,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class Content extends StatefulWidget {
   final String topicName, newsName, imgUrl;
   final Color color;

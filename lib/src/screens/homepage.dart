@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../widgets/content.dart';
 import './content_view.dart';
+import './news_all.dart';
 import 'package:flutter/foundation.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -79,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(builder: (BuildContext ctx) {
-                            return new ContentView();
+                            return new ViewAll();
                           }))),
                   InkWell(
                       child: Content(
