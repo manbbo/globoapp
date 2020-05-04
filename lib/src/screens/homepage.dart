@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           }))),
                   InkWell(
                       child: Content(
-                        topicName: "corona\nvirus",
+                        topicName: "saúde",
                         newsName:
                         "Aldir Blanc, compositor e escritor, morre no Rio",
                         imgUrl:

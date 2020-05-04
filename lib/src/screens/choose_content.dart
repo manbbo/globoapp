@@ -7,14 +7,17 @@ class ChooseContent extends StatefulWidget {
 }
 
 class _ChooseContentState extends State<ChooseContent> {
-  List<bool> disabled = [false,false,false,false,false,false,false,false,false,false];
+  List<bool> disabled =
+  [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
+
   Widget createButton(text, int i) {
+    Color c = Colors.white;
     //bool disabled = false;
     String finalText;
     return RaisedButton(
     child: Text(this.disabled[i]? "Adicionado" : text ),
-      color: Colors.white,
-      onPressed: () => this.disabled[i] ? this.disabled[i] = false : this.disabled[i] = true,
+      color: c,
+      onPressed: () => this.disabled[i] ? c = Colors.grey : null,
       highlightColor: Colors.grey,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18.0),
@@ -61,10 +64,15 @@ class _ChooseContentState extends State<ChooseContent> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     createButton('Mundo', 9),
+                    createButton('Economia', 10),
+                    createButton('BBB', 11),
                   ],
                 ),
                 Row(
-                  children: <Widget>[],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    createButton('Revista', 12),
+                  createButton('TV', 13),],
                 ),
               ],
             )
