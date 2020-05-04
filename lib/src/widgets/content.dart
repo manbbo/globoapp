@@ -48,17 +48,17 @@ class _MainContentState extends State<MainContent> {
                     child:
                     Stack(children: <Widget>[
                       ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                          borderRadius: BorderRadius.all(Radius.circular(50.0)),
                           child: Image.network(imgUrl,
-                            width: 600,
+                            width: 800,
                             height: 300,)
                       ),
                       Container(
-                        margin: EdgeInsets.only(top:170),
-                        padding: EdgeInsets.only(left: 20),
+                        margin: EdgeInsets.only(top:150),
+                        padding: EdgeInsets.only(left: 10),
                         decoration: BoxDecoration(
                           color: Colors.black54,
-                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25), bottomRight: Radius.circular(25))
                         ),
                         //width: 300,
                           height: 85,
@@ -68,8 +68,8 @@ class _MainContentState extends State<MainContent> {
                     ],),
                 ),
                 options: CarouselOptions(
-                  height: 1000,
-                  viewportFraction: 0.8,
+                  height: 300,
+                  viewportFraction: 0.80,
                   aspectRatio: 16/9,
                   initialPage: 0,
                   enableInfiniteScroll: true,
@@ -168,7 +168,7 @@ class _ContentState extends State<Content> {
           ),
             textDirection: TextDirection.rtl,),
           height: 180,
-          width: 100,
+          width: 92,
           decoration: BoxDecoration(
               color: color,
               borderRadius: BorderRadius.circular(5)),
