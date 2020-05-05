@@ -119,7 +119,6 @@ class _NewsState extends State<News> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       child: Stack(
         children: <Widget>[

@@ -11,7 +11,6 @@ class _ViewAllState extends State<ViewAll> {
   final globalKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       key: globalKey,
       body: Stack(children: <Widget>[

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:Globo_Atualidades/src/widgets/CustomDrawer.dart';
 import '../widgets/content.dart';
 import './content_view.dart';
 import './news_all.dart';
@@ -157,9 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       resizeToAvoidBottomInset: true,
-      drawer: Drawer(
-        child: Text('DRAWER'),
-      ),
+      drawer: CustomDrawer()
     );
   }
 }
