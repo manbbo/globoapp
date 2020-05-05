@@ -1,8 +1,8 @@
-# Mega Hack App Project
+# Globo Tudo
 
-An app for Globo Challenge at Mega Hack
+An app for Globo Challenge at [Mega Hack Second Edition 2020](https://www.megahack.com.br/)  
 
-## Packages I've used
+## Packages we've used
 
 Above are the packages and/or features used to build this project
 - [Carousel Slider](https://pub.dev/packages/carousel_slider)
@@ -10,6 +10,8 @@ Above are the packages and/or features used to build this project
 - [Nested ScrollView - included into Flutter](https://api.flutter.dev/flutter/widgets/NestedScrollView-class.html)
 - [SliverApp - included into Flutter](https://api.flutter.dev/flutter/material/SliverAppBar-class.html)
 - [Custom Scrollview - included into Flutter](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html)
+- [Inkwell- included into Flutter](https://api.flutter.dev/flutter/material/InkWell-class.html)
+- [ClipRRect- included into Flutter](https://api.flutter.dev/flutter/material/InkWell-class.html)
 
 ## Getting Started
 
