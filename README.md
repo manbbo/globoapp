@@ -11,7 +11,7 @@ Above are the packages and/or features used to build this project
 - [SliverApp - included into Flutter](https://api.flutter.dev/flutter/material/SliverAppBar-class.html)
 - [Custom Scrollview - included into Flutter](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html)
 - [Inkwell- included into Flutter](https://api.flutter.dev/flutter/material/InkWell-class.html)
-- [ClipRRect- included into Flutter](https://api.flutter.dev/flutter/material/InkWell-class.html)
+- [ClipRRect- included into Flutter](https://api.flutter.dev/flutter/widgets/ClipRRect-class.html)
 
 ## Getting Started
 
