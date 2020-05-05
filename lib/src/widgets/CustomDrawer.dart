@@ -50,6 +50,10 @@ import 'package:get/get.dart';
               MenuList(title: "Noticiário", list: [
                 MenuItem("Últimas notícias", () => Navigator.of(context).pop()),
                 MenuItem("Em alta", () => Navigator.of(context).pop()),
+                MenuItem("G1", () => Navigator.of(context).pop()),
+                MenuItem("GE", () => Navigator.of(context).pop()),
+                MenuItem("Globo Play", () => Navigator.of(context).pop()),
+                MenuItem("Rádio Globo", () => Navigator.of(context).pop()),
               ]),
               MenuList(title: "Perfil", list: [
                 MenuItem("Editar", () => Navigator.of(context).pop()),

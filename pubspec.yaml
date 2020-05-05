@@ -28,6 +28,7 @@ dependencies:
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.7.0"
   flutter_test:
     sdk: flutter
 
@@ -42,6 +43,12 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+flutter_icons:
+  ios: true
+  android: true
+  image_path_ios: "asset/launcher/logo.jpg"
+  image_path_android: "asset/launcher/logo.jpg"
 
   fonts:
     - family: OpenSans
