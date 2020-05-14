@@ -25,3 +25,36 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Screens
+
+First Screen: Theme chooser page
+<p align="center">
+<img src=https://github.com/manbbo/globoapp/blob/master/screens/foto6.png>
+</p>
+
+Second Screen: Home page
+<p align="center">
+<img src=https://github.com/manbbo/globoapp/blob/master/screens/foto4.png>
+</p>
+
+Menu Bar: Open Drawer
+<p align="center">
+<img src=https://github.com/manbbo/globoapp/blob/master/screens/foto8.png>
+</p>
+
+Points: Redeem Screen
+<p align="center">
+<img src=https://github.com/manbbo/globoapp/blob/master/screens/foto9.png>
+</p>
+
+Third Screen: Article's page
+<p align="center">
+<img src=https://github.com/manbbo/globoapp/blob/master/screens/foto5.png>
+</p>
+
+Forth Screen: Theme page
+<p align="center">
+<img src=https://github.com/manbbo/globoapp/blob/master/screens/foto7.png>
+</p>
+
